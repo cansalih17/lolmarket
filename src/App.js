@@ -11,7 +11,7 @@ function App() {
     const getItems = async () => {
       try {
         const response = await axios.get(
-          "http://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/item.json"
+          "https://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/item.json"
         );
         const allItems = Object.values(response.data.data);
         setItems(allItems);
@@ -81,9 +81,6 @@ function App() {
                   >
                     {item.gold.base}
                   </h1>
-                  {/* <h2>fiyat : {item.gold.base}</h2>
-                  {/* <h2>özellik : {item.description}</h2> */
-                  /*Özellik: <div dangerouslySetInnerHTML={{ __html: item.description }} /> */}
                 </div>
               ))
             ) : (
